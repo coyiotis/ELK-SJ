@@ -13,3 +13,6 @@ logstash/pipelines/*
 !/logstash/pipelines/example-logstash-template.conf
 
 jupyter/notebooks/.ipynb_checkpoints/
+
+nprobe/pcap_data/*
+!nprobe/pcap_data/README.md
