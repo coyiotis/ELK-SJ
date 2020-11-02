@@ -1,0 +1,1 @@
+Copy your pcap files in this folder so that they can be processed with any of the tools deployed within the container, like nprobe or tshark
