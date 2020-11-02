@@ -13,7 +13,7 @@ RUN yum localinstall /tmp/jdk-8u131-linux-x64.rpm -y
 RUN rm -rf /tmp/*.rpm
 
 # Get and install Zookeeper
-RUN wget -c https://apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-${ZOOKEEPER_VERSION}.tar.gz -O /tmp/zookeeper-${ZOOKEEPER_VERSION}.tar.gz
+RUN wget -c https://archive.apache.org/dist/zookeeper/zookeeper-3.4.14/zookeeper-${ZOOKEEPER_VERSION}.tar.gz -O /tmp/zookeeper-${ZOOKEEPER_VERSION}.tar.gz
 RUN tar -xvzf /tmp/zookeeper-${ZOOKEEPER_VERSION}.tar.gz -C /opt
 RUN ln -s /opt/zookeeper-${ZOOKEEPER_VERSION} ${ZOOKEEPER_HOME}
 RUN rm -rf /tmp/*.tar.gz
