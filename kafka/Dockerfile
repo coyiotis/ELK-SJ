@@ -28,4 +28,5 @@ RUN ln -s /opt/scala-2.12.4 ${SCALA_HOME}
 WORKDIR /opt/kafka
 ENV PATH=${PATH}:${SCALA_HOME}/bin:${KAFKA_HOME}/bin
 #ENTRYPOINT ["kafka-server-start.sh", "/opt/kafka/config/server.properties"]
+RUN mkdir -p /entrypoint
 ENTRYPOINT ["/entrypoint/entrypoint.sh"]

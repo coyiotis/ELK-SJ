@@ -6,6 +6,7 @@ services:
     build: kafka/.
     volumes:
       - ./kafka/server.properties:/opt/kafka/config/server.properties
+      - ./kafka/entrypoint.sh:/entrypoint.sh
     depends_on:
       - "zookeeper"
     restart: always
