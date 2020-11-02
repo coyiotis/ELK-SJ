@@ -21,12 +21,10 @@ RUN wget -c https://downloads.lightbend.com/scala/2.12.4/scala-2.12.4.tgz -O /tm
 RUN tar -xvzf /tmp/scala-2.12.4.tgz -C /opt
 RUN ln -s /opt/scala-2.12.4 ${SCALA_HOME}
 
-# Update server.properties
-# ENV IP_ADDR='172.18.0.40'
-#RUN IP_ADDR=$(hostname -I | cut -d ' ' -f1) && sed -i 's/IP_ADDR/${IP_ADDR}/g' /opt/kafka/config/server.properties
-
 WORKDIR /opt/kafka
 ENV PATH=${PATH}:${SCALA_HOME}/bin:${KAFKA_HOME}/bin
-#ENTRYPOINT ["kafka-server-start.sh", "/opt/kafka/config/server.properties"]
+
+RUN mkdir -p /opt/kafka/config
 RUN mkdir -p /entrypoint
+
 ENTRYPOINT ["/entrypoint/entrypoint.sh"]
