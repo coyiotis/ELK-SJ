@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tshark
 RUN yes yes | DEBIAN_FRONTEND=teletype dpkg-reconfigure wireshark-common
 RUN apt-get install -y fakeroot tcpreplay
 RUN apt-get install -y libdnet
-RUN apt-get install -y iputils-ping
+RUN apt-get install -y iputils-ping jq
 
 RUN apt-get -y install nprobe; exit 0
 
