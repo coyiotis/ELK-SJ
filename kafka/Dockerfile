@@ -11,7 +11,7 @@ RUN yum localinstall /tmp/jdk-8u131-linux-x64.rpm -y
 RUN rm -rf /tmp/*.rpm
 
 # Get and install kafka
-RUN wget -c http://apache.claz.org/kafka/2.2.2/kafka_2.12-2.2.2.tgz -O /tmp/kafka_2.12-2.2.2.tgz
+RUN wget -c https://archive.apache.org/dist/kafka/2.2.2/kafka_2.12-2.2.2.tgz -O /tmp/kafka_2.12-2.2.2.tgz
 RUN tar -xvzf /tmp/kafka_2.12-2.2.2.tgz -C /opt
 RUN ln -s /opt/kafka_2.12-2.2.2 ${KAFKA_HOME}
 
